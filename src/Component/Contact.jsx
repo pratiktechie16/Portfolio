@@ -87,10 +87,10 @@ const Contact = () => {
           <h1>Get in touch now</h1>
         </div>
 
-        <aside id="contactContainerBox" className="animationBox">
+        <aside id="contactContainerBox">
           <div className="contactLeft">
             {/* Email Info */}
-            <div className="contactInfoDiv">
+            <div className="contactInfoDiv animationBox">
               <i class="fa-solid fa-envelope"></i>
               <span
                 id="email_address"
@@ -111,7 +111,7 @@ const Contact = () => {
             </div>
 
             {/* Phone Info */}
-            <div className="contactInfoDiv">
+            <div className="contactInfoDiv animationBox">
               <i class="fa-solid fa-phone"></i>
               <span
                 id="phone_number"
@@ -133,7 +133,7 @@ const Contact = () => {
             </div>
 
             {/* Location Info */}
-            <div className="linksDiv">
+            <div className="linksDiv animationBox">
               <i
                 class="fa-solid fa-location-dot"
                 style={{ fontSize: "3rem" }}
@@ -160,7 +160,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="contactRight">
+          <div className="contactRight animationBox">
             <div className="contactImg">
               <img
                 src="https://images.unsplash.com/photo-1558522195-e1201b090344?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

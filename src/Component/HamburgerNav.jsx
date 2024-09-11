@@ -5,7 +5,7 @@ import Logo from "./Icons/Era-1-removebg-preview.png";
 const HamburgerNav = ({ scrollToSection }) => {
   const [display, setDisplay] = useState({
     hamburgerNav: false,
-    hamburgerNavWidth: "0px",
+    hamburgerNavWidth: "0vw",
     crossBtn: false,
     hamburgerBtn: true,
   });
@@ -44,7 +44,7 @@ const HamburgerNav = ({ scrollToSection }) => {
                 onClick={() =>
                   setDisplay({
                     hamburgerNav: true,
-                    hamburgerNavWidth: "390.4px",
+                    hamburgerNavWidth: "100vw",
                     crossBtn: true,
                     hamburgerBtn: false,
                   })
@@ -58,7 +58,7 @@ const HamburgerNav = ({ scrollToSection }) => {
                 onClick={() =>
                   setDisplay({
                     hamburgerNav: false,
-                    hamburgerNavWidth: "0px",
+                    hamburgerNavWidth: "0vw",
                     crossBtn: false,
                     hamburgerBtn: true,
                   })
@@ -68,7 +68,6 @@ const HamburgerNav = ({ scrollToSection }) => {
           </button>
         </section>
 
-        {/* {display.hamburgerNav === true ? ( */}
         <section
           className="hamburgerNav"
           style={{ width: display.hamburgerNavWidth }}
@@ -79,7 +78,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -93,7 +92,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -107,7 +106,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -121,7 +120,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -135,7 +134,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -149,7 +148,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -163,7 +162,7 @@ const HamburgerNav = ({ scrollToSection }) => {
             onClick={() => {
               setDisplay({
                 hamburgerNav: false,
-                hamburgerNavWidth: "0px",
+                hamburgerNavWidth: "0vw",
                 crossBtn: false,
                 hamburgerBtn: true,
               });
@@ -173,7 +172,6 @@ const HamburgerNav = ({ scrollToSection }) => {
             <span>Contact Me</span>
           </div>
         </section>
-        {/* ) : null} */}
       </section>
     </>
   );

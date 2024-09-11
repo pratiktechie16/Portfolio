@@ -24,7 +24,7 @@ const Skills = () => {
           <h1>My technical arsenal</h1>
         </div>
         <div id="skillContainerBox">
-          <div className="skillBox">
+          <div className="skillBox animationBox">
             <div>
               <img className="icons" src={javaScript} alt="" />
               <span className="onHoverText">Javascript</span>

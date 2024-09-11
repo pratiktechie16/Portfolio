@@ -10,7 +10,7 @@ const Links = () => {
         </div>
         <div id="linksContainerBox">
           {/* Linkedin */}
-          <div className="linksDiv">
+          <div className="linksDiv animationBox">
             <i className="fa-brands fa-linkedin"></i>
             <a href="https://www.linkedin.com/in/pratikjdv16/">
               Connect on Linkedin{" "}
@@ -32,7 +32,7 @@ const Links = () => {
           </div>
 
           {/* Github */}
-          <div className="linksDiv">
+          <div className="linksDiv animationBox">
             <i className="fa-brands fa-github"></i>
             <a href="https://www.instagram.com/__pratik16/">
               Check repose on Github{" "}
@@ -54,7 +54,7 @@ const Links = () => {
           </div>
 
           {/* Instagram */}
-          <div className="linksDiv">
+          <div className="linksDiv animationBox">
             <i className="fa-brands fa-instagram"></i>
             <a href="https://www.instagram.com/pratiktechie/">
               Follow on Instagram{" "}

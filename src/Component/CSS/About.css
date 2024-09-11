@@ -1,23 +1,12 @@
-* {
-  padding: 0rem;
-  height: 0rem;
-  box-sizing: border-box;
-}
-
-body {
-  background: white;
-}
-
 #aboutContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: absolute;
-  top: 3.4rem;
   width: 100%;
   height: fit-content;
-  background: white;
+  padding: 4rem 0rem;
+  /* background: linear-gradient(90deg, #111111 68%, transparent 0%); */
 }
 
 #aboutContainerBox {
@@ -25,38 +14,58 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 72.1rem;
-  height: 35rem;
-  padding-top: 4rem;
+  width: 68rem;
+  height: fit-content;
+  padding: 3rem 0rem;
+}
+
+.aboutBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  background-color: #111111;
+  box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
+    0px 0px 1.8px rgba(0, 0, 0, 0.01), 0px 0px 3px rgba(0, 0, 0, 0.012),
+    0px 0px 4.6px rgba(0, 0, 0, 0.014), 0px 0px 6.8px rgba(0, 0, 0, 0.016),
+    0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
+    0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 34rem;
+}
+
+.aboutHeadingDiv {
+  width: 100%;
 }
 
 /* About left */
 .aboutLeft {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 27rem;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  width: 34rem;
   height: 100%;
 }
 
-.aboutLeft div {
-  background: url("../Icons/pratikImg.png") center center/cover;
-  box-shadow: 5.2px 5.4px 0px rgb(255 255 255), 24px 25px 0px rgb(229 231 235);
-  border-radius: 0rem 1rem 0rem 1rem;
-  width: 21rem;
-  height: 25rem;
+.aboutLeft img {
+  width: 100%;
+  height: fit-content;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
 /* About Right */
 .aboutRight {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 45rem;
+  width: 34rem;
   height: 100%;
+  padding: 3rem;
 }
 
 /* About Right Top */
@@ -66,321 +75,47 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 45rem;
+  width: 100%;
   height: fit-content;
-}
-
-.aboutHeading {
-  color: black;
-  font-size: 3.12rem;
-  width: 45rem;
-  height: 3.4rem;
-  margin-bottom: 0.5rem;
 }
 
 .aboutPara {
-  font-size: 1rem;
-  color: #4b5563;
-  text-align: justify;
-  line-height: 1.43rem;
-  width: 45rem;
+  width: 100%;
   height: fit-content;
   margin-top: 1rem;
 }
 
-.highlight {
-  width: fit-content;
-  height: fit-content;
-  font-weight: 600;
-  margin: 0rem 0.3rem;
-}
+@media (max-width: 600px) {
+  #aboutContainer {
+    padding-bottom: 0rem;
+  }
 
-/* About Right Bottom */
-.aboutRightBottom {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 4px rgba(67, 67, 67, 0.5);
-  border-radius: 0rem 1rem 0rem 1rem;
-  margin-top: 1rem;
-  width: 72.1rem;
-  height: fit-content;
-  margin-bottom: 9rem;
-}
+  #aboutContainerBox {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100;
+    padding: 3rem 0rem;
+  }
 
-.aboutRightBottom hr {
-  width: 45rem;
-  margin-top: 0.4rem;
-}
+  .aboutBox {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+  }
 
-/* About Navbar */
-.aboutNav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #e5e7eb;
-  width: 100%;
-  height: 3.4rem;
-  border-radius: 0rem 1rem 0rem 0rem;
-}
+  .aboutLeft {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    width: 100%;
+  }
 
-.aboutNav div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-}
+  .aboutLeft img {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
 
-.aboutNav div > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #454545;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  width: fit-content;
-  height: 2rem;
-  padding: 0rem 1.5rem;
-}
-
-.aboutNav div > a:hover {
-  background-color: #ffffff52;
-}
-
-.aboutNav div a.active {
-  color: #454545;
-  border: 2px solid #454545;
-}
-
-.aboutNav div a.active:hover {
-  color: #454545;
-  border: 2px solid #454545;
-  background-color: transparent;
-}
-
-/* Skill Section */
-.skillBox {
-  display: grid;
-  grid-template-columns: repeat(8, 4.4rem);
-  grid-column-gap: 5rem;
-  grid-row-gap: 3rem;
-  color: grey;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 1.5rem;
-}
-
-.skillBox div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #c4e6ffab;
-  font-weight: 600;
-  font-size: 1.06rem;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  position: relative;
-}
-
-.skillBox p {
-  color: #474747;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.skillBox div .onHoverText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-wrap: nowrap;
-  color: white;
-  background-color: #454545;
-  font-size: 0.8rem;
-  font-weight: 100;
-  letter-spacing: 0.7px;
-  position: absolute;
-  bottom: 50%;
-  width: fit-content;
-  height: 0rem;
-  padding: 0rem;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.icons {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.2rem;
-}
-
-.skillBox div:hover .onHoverText {
-  bottom: -35px;
-  height: fit-content;
-  padding: 0.5rem 1rem;
-  opacity: 1;
-}
-
-/* Experience Section */
-.experienceBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: grey;
-  width: 100%;
-  height: fit-content;
-  padding: 1rem;
-}
-
-.aboutExperienceBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 25rem;
-}
-
-.aboutExperienceBox-Items {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 32%;
-  height: 100%;
-  padding: 0rem 0.5rem;
-}
-
-.aboutHeadingIconDiv {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none;
-  width: 100%;
-  height: 2rem;
-  margin-bottom: 1rem;
-}
-
-.wrapExpIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: 1px solid #454545;
-  border-radius: 1.2rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  overflow: hidden;
-}
-
-.wrapExpIcon::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  background-color: none;
-  width: 1.5rem;
-  height: 0rem;
-  transition: all 0.5s;
-}
-
-.aboutExperienceBox-Items:hover .wrapExpIcon::before {
-  top: 0;
-  background-color: #454545;
-  height: 1.5rem;
-}
-
-.aboutExperienceBox-Items:hover .wrapExpIcon > svg {
-  fill: #ffffff;
-  transform: rotateY(360deg);
-}
-
-.wrapExpIcon > svg {
-  width: 0.8rem;
-  height: 0.8rem;
-  transition: all 0.5s;
-}
-
-.aboutHeadingIconDiv > span {
-  display: flex;
-  align-items: center;
-  color: black;
-  font-size: 1.2rem;
-  width: fit-content;
-  height: 2rem;
-  margin-left: 0.5rem;
-}
-
-.aboutExperienceBox-Items > p {
-  font-size: 1rem;
-  color: #545e6b;
-  line-height: 1.25rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0.3rem 0rem;
-}
-
-/* Education Section */
-.educationBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: grey;
-  width: 100%;
-  height: 18rem;
-  padding: 1rem;
-}
-
-.aboutEducationBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: fit-content;
-  height: 3.43rem;
-}
-
-.aboutEducationBox:hover .wrapExpIcon::before {
-  top: 0;
-  background-color: #454545;
-  height: 1.5rem;
-}
-
-.aboutEducationBox:hover .wrapExpIcon > svg {
-  fill: #ffffff;
-  transform: rotateY(360deg);
-}
-
-.universityHead {
-  display: inline !important;
-  font-size: 1.06rem !important;
-  font-weight: 600 !important;
-  color: black !important;
-  width: fit-content !important;
-  height: fit-content !important;
-}
-
-.passYear {
-  color: #474747 !important;
-  font-size: 1.06rem !important;
-  width: fit-content !important;
-  height: fit-content !important;
-}
-
-.degreeName {
-  color: #5f5f5f !important;
-  font-size: 0.93rem !important;
-  width: fit-content !important;
-  height: fit-content !important;
-}
-
-.aboutRight {
-  opacity: 0;
-  transform: translateY(7rem);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.aboutRight.animate {
-  opacity: 1;
-  transform: translateY(0);
+  .aboutRight {
+    width: 100%;
+    padding: 3rem 1.5rem;
+  }
 }

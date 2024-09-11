@@ -1,31 +1,32 @@
-* {
-  margin: 0rem;
-  padding: 0rem;
-  box-sizing: border-box;
-}
-
 .hamburger {
   display: none;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
   width: 100%;
-  height: 3.43rem;
-  z-index: 1;
+  height: 3.4rem;
+  padding: 0rem 1.1rem;
+  transition: background-color 0.3s ease;
+  z-index: 3;
 }
 
 .hamburgerNav-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
-  position: fixed;
-  top: 0rem;
   width: 100%;
-  height: 3.43rem;
-  z-index: 2;
-  padding: 0rem 1rem;
+  height: 100%;
+}
+
+.hamburgerNav-section.blur {
+  backdrop-filter: blur(24px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hamburgerNav-section.noBlur {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .showHamburgerBtn {
@@ -34,52 +35,60 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 100%;
 }
 
-.showHamburgerBtn svg {
-  width: 2rem;
-  height: 2rem;
+.showHamburgerBtn i {
+  color: white;
+  font-size: 1.5rem;
 }
 
 /* HamburgerNav */
 .hamburgerNav {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  gap: 2rem;
   position: fixed;
-  top: 3.42rem;
-  width: 100%;
-  height: 16rem;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 0.06rem solid #a14848;
-  z-index: 1;
+  backdrop-filter: blur(24px);
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0rem;
+  right: 0rem;
+  width: 0px;
+  height: 100vh;
+  /* padding: 5.5rem 1.25rem; */
+  z-index: -1;
+  transition: all 0.6s;
 }
 
-.hamburgerNav div {
+.navBtn {
   display: flex;
-  margin: 0.93rem;
+  justify-content: flex-start;
+  align-items: center;
   width: fit-content;
-  height: 1.5rem;
+  height: 2rem;
+  margin-left: 1.25rem;
 }
 
-.hamburgerNav div a {
-  display: flex;
-  text-decoration: none;
-  font-size: 1.063rem;
-  font-weight: 600;
-  color: grey;
-  width: fit-content;
-  height: fit-content;
+.navBtn span {
+  text-wrap: nowrap;
+  font-size: 1.685625rem;
+  line-height: 130%;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+  color: white;
 }
 
-.hamburgerNav div a:hover {
-  color: #d9d6d6;
-}
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
 
-.hamburgerNav div a.active {
-  color: #a33f3f;
+  .webTitle img {
+    width: 1.3rem;
+  }
+
+  .webTitle h4 {
+    font-size: 1.1rem;
+  }
 }

@@ -5,8 +5,11 @@ const Footer = () => {
   return (
     <>
       <footer id="footer">
-        <div>
-          <p>&copy; 2023 l Designed and coded by Pratik Jadhav 💻</p>
+        <div className="footerDesktopText">
+          <p>&copy; 2022-2024 l Designed and coded by pratiktechie</p>
+        </div>
+        <div className="footerMobileText">
+          <p>Pratiktechie &copy; 2022-2024</p>
         </div>
       </footer>
     </>

@@ -1,35 +1,38 @@
-* {
-  padding: 0rem;
-  margin: 0rem;
-  box-sizing: border-box;
-}
-
-.navbar {
+.navbarContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0rem;
   width: 100%;
   height: 3.4rem;
-  z-index: 1;
-  padding: 0rem 11rem;
   transition: background-color 0.3s ease; /* Smooth transition */
   z-index: 3;
 }
 
-.navbar.blur {
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
+.navbarContainer.blur {
+  backdrop-filter: blur(24px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbarContainer.noBlur {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbarContainerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 68rem;
+  height: 100%;
 }
 
 .navbar-content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  list-style: none;
-  width: 30rem;
-  height: 3.43rem;
+  width: fit-content;
+  height: 100%;
 }
 
 .navbar-content div {
@@ -38,50 +41,51 @@
   align-items: center;
   width: 100%;
   height: 3rem;
+  margin: 0rem 1.5rem;
 }
 
-.navbar-content div > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #454545;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  width: fit-content;
-  height: 2rem;
-  padding: 0rem 1.5rem;
+.navbar-content div span {
+  color: #b4b4b4;
+  font-size: 0.87rem;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.navbar-content div > a:hover {
-  background-color: #e5e7eb;
-}
-
-.navbar-content div > a.active {
-  color: #454545;
-  border: 2px solid #454545;
-  padding: 0rem 1.5rem;
-}
-
-.navbar-content div > a.active:hover {
-  background-color: transparent;
+.navbar-content div span:hover {
+  color: white;
 }
 
 .webTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: fit-content;
+  height: 100%;
 }
 
 .webTitle img {
-  width: 2rem;
-  height: 2rem;
+  margin-right: 0.6rem;
+  width: 1.2rem;
+  height: fit-content;
 }
 
-@media (max-width: 1440px) {
-  .navbar {
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 3.5rem;
+}
+
+.location span {
+  font-size: 0.9rem;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media (max-width: 600px) {
+  .navbarContainer {
     display: none;
   }
 }

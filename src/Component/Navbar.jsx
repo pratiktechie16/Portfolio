@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../Component/CSS/Navbar.css";
-import { NavLink } from "react-router-dom";
-import Logo from "../Component/Icons/portfolio-logo.png";
+import Logo from "./Icons/Era-1-removebg-preview.png";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection }) => {
   const [isBlurred, setIsBlurred] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
       setIsBlurred(true);
     } else {
       setIsBlurred(false);
@@ -23,32 +22,51 @@ const Navbar = () => {
 
   return (
     <>
-      <section className={`navbar ${isBlurred ? "blur" : ""}`}>
-        <div className="webTitle">
-          <img src={Logo} alt="" />
-        </div>
-        <div className="navbar-content">
-          <div>
-            <NavLink id="homeNavBtn" to="/home">
-              Home
-            </NavLink>
+      <section className={`navbarContainer ${isBlurred ? "blur" : "noBlur"}`}>
+        <section className="navbarContainerBox">
+          <div className="webTitle">
+            <img src={Logo} alt="" />
+            <h4>pratiktechie</h4>
           </div>
-          <div>
-            <NavLink id="aboutNavBtn" to="/about">
-              About
-            </NavLink>
+          <div className="navbar-content">
+            <div>
+              <span onClick={() => scrollToSection("homeContainer")}>Home</span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("aboutContainer")}>
+                About
+              </span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("skillContainer")}>
+                Skills
+              </span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("experienceContainer")}>
+                Experience
+              </span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("workContainer")}>
+                Projects
+              </span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("linksContainer")}>
+                Links
+              </span>
+            </div>
+            <div>
+              <span onClick={() => scrollToSection("contactContainer")}>
+                Contact
+              </span>
+            </div>
           </div>
-          <div>
-            <NavLink id="workNavBtn" to="/work">
-              Work
-            </NavLink>
+          <div className="location">
+            <span>Pune, India</span>
           </div>
-          <div>
-            <NavLink id="contactNavBtn" to="/contact">
-              Contact
-            </NavLink>
-          </div>
-        </div>
+        </section>
       </section>
     </>
   );

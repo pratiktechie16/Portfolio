@@ -1,0 +1,128 @@
+/* Experience Section */
+#experienceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  padding: 4rem 0rem;
+  /* background: linear-gradient(90deg, #111111 68%, transparent 0%); */
+}
+
+#experienceContainerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: url("https://images.unsplash.com/photo-1671226366560-cc3c7ff768c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center center/cover;
+  backdrop-filter: blur(24px);
+  width: 68rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+  padding: 4rem 0rem;
+  margin-top: 3rem;
+}
+
+.experienceBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
+    0px 0px 1.8px rgba(0, 0, 0, 0.01), 0px 0px 3px rgba(0, 0, 0, 0.012),
+    0px 0px 4.6px rgba(0, 0, 0, 0.014), 0px 0px 6.8px rgba(0, 0, 0, 0.016),
+    0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
+    0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03);
+  background: #111111;
+  width: 85%;
+  height: fit-content;
+  padding: 2rem;
+}
+
+.experienceHeadingDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
+}
+
+.companyHeadingDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.experienceDescriptionDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.experienceDescriptionDiv p {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.experienceDescriptionDiv p > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: black;
+  width: fit-content;
+  height: 2rem;
+  padding: 0rem 1rem;
+}
+
+@media (max-width: 600px) {
+  #experienceContainer {
+    padding-bottom: 0rem;
+  }
+
+  #experienceContainerBox {
+    width: 100%;
+    padding: 1rem 0rem;
+  }
+
+  .experienceBox {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .companyHeadingDiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .companyHeadingDiv h4 {
+    margin-top: 0.5rem;
+  }
+
+  .experienceHeadingDiv h3 {
+    margin-top: 1.5rem !important;
+  }
+
+  .experienceDescriptionDiv {
+    padding: 0rem;
+    margin-top: 1.5rem;
+  }
+
+  .experienceDescriptionDiv p {
+    margin-top: 0.5rem;
+  }
+}

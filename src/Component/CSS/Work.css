@@ -1,18 +1,12 @@
-* {
-  padding: 0rem;
-  margin: 0rem;
-  box-sizing: border-box;
-}
-
 #workContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: absolute;
-  top: 3.4rem;
   width: 100%;
   height: fit-content;
+  padding: 4rem 0rem;
+  /* background: linear-gradient(90deg, transparent 68%, #111111 0%); */
 }
 
 #workContainerBox {
@@ -21,17 +15,13 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 72.1rem;
+  width: 68rem;
   height: fit-content;
-  padding-top: 4rem;
 }
 
 .workHeading {
-  color: black;
-  font-size: 3.12rem;
+  font-size: 4.5rem;
   width: 100%;
-  height: 3.75rem;
-  margin-bottom: 2rem;
 }
 
 .allProjectBox {
@@ -43,45 +33,52 @@
   height: fit-content;
 }
 
-#projectBox {
+.projectBox {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #111111;
+  box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
+    0px 0px 1.8px rgba(0, 0, 0, 0.01), 0px 0px 3px rgba(0, 0, 0, 0.012),
+    0px 0px 4.6px rgba(0, 0, 0, 0.014), 0px 0px 6.8px rgba(0, 0, 0, 0.016),
+    0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
+    0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
   width: 100%;
-  height: 29rem;
-  padding: 1rem;
-  /* margin-bottom: 4rem; */
+  height: 34rem;
+  margin: 3rem 0rem;
   transition: all 0.5s ease-in-out;
 }
 
-#firstWork {
+.workImg {
   display: flex;
-  align-items: flex-end;
-  background: url("../Icons/work_2.jpg") center center/cover;
-  box-shadow: 5.2px 5.4px 0px rgb(255 255 255), 24px 25px 0px rgb(229 231 235);
-  border-radius: 0rem 1rem 0rem 1rem;
-  width: 21rem;
-  height: 25rem;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  width: 34rem;
+  height: 100%;
+}
+
+.workImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.secondProjectBox .workImg > img {
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 .projectContent {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 45rem;
+  width: 34rem;
   height: 100%;
-  padding-top: 1rem;
-}
-
-.projectHeading {
-  color: #454545;
-  font-size: 2.5rem;
-  width: 100%;
-  height: 3.4rem;
-  margin-bottom: 0.5rem;
+  padding: 3rem;
 }
 
 .projectPara {
@@ -91,119 +88,60 @@
   align-items: center;
   width: 100%;
   height: fit-content;
+  margin-top: 1.5rem;
 }
 
 .projectPara p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1rem;
-  color: #4b5563;
-  text-align: justify;
-  line-height: 1.43rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   width: 100%;
   height: fit-content;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .projectPara p > span {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #454545;
-  background-color: #e5e7eb;
-  border-radius: 0rem 0.3rem 0rem 0.3rem;
+  color: #ffffff;
+  background-color: black;
   font-size: 0.9rem;
   font-weight: 500;
-  width: -moz-fit-content;
   width: fit-content;
   height: 2rem;
   padding: 0rem 1rem;
-  margin-right: 0.5rem;
-  border-bottom: 1px solid #454545;
-  border-right: 1px solid #454545;
 }
 
-#secondWork {
+.viewBtnBox {
   display: flex;
-  align-items: flex-end;
-  background: url("../Icons/work_3.jpg") center center/cover;
-  box-shadow: 5.2px 5.4px 0px rgb(255 255 255), 24px 25px 0px rgb(229 231 235);
-  border-radius: 0rem 1rem 0rem 1rem;
-  width: 21rem;
-  height: 25rem;
-  overflow: hidden;
-  margin-right: 1.5rem;
-}
-
-#thirdWork {
-  display: flex;
-  align-items: flex-end;
-  background: url("../Icons/work_1.jpg") center center/cover;
-  box-shadow: 5.2px 5.4px 0px rgb(255 255 255), 24px 25px 0px rgb(229 231 235);
-  border-radius: 0rem 1rem 0rem 1rem;
-  width: 21rem;
-  height: 25rem;
-  overflow: hidden;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 21rem;
-  height: 0rem;
-  backdrop-filter: blur(8px);
-  background-color: rgb(255 255 255 / 0%);
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-}
-
-.project svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  z-index: 1;
-}
-
-.project-title {
-  color: black;
-  font-size: 1.06rem;
-  font-weight: 700;
-  width: fit-content;
-  height: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.project-Btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.88rem;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: #454545;
-  border-radius: 3rem;
-  cursor: pointer;
-}
-
-#firstWork:hover .project {
-  height: 100%;
-}
-
-#secondWork:hover .project {
-  height: 100%;
-}
-
-#thirdWork:hover .project {
-  height: 100%;
-}
-
-hr {
-  color: #454545;
   width: 100%;
-  margin: 2rem 0rem;
+  height: 1.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.viewBtnBox a {
+  color: white;
+  font-size: 0.95426rem;
+  text-decoration: none;
+  width: fit-content;
+  height: 100%;
+}
+
+.viewBtnBox a:hover {
+  border-bottom: 1px solid white;
+}
+
+.viewBtnBox a > svg {
+  fill: white;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-left: 0.1rem;
 }
 
 .seeMoreBtnBox {
@@ -211,26 +149,25 @@ hr {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6rem;
-  margin-top: 4rem;
-  margin-bottom: 9rem;
+  margin-top: 1rem;
 }
 
 #seeMoreBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #454545;
-  background: white;
+  background-color: #ffffff;
+  border: 1px solid white;
+  border-radius: 2.1rem;
   width: fit-content;
   height: 2.5rem;
-  cursor: pointer;
   padding: 0rem 1.25rem;
+  cursor: pointer;
 }
 
 #seeMoreBtn:hover a > svg {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 0.625rem;
+  height: 0.625rem;
   margin-left: 0.5rem;
 }
 
@@ -238,30 +175,79 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #454545;
+  color: #000000;
   font-size: 1rem;
-  font-weight: 500;
   text-decoration: none;
   width: 100%;
   height: 100%;
 }
 
 #seeMoreBtn a > svg {
+  fill: #000000;
   width: 0rem;
   height: 0rem;
   margin-left: 0rem;
   transition: all 0.4s ease, all 0.4s ease;
 }
 
-/* Work.css */
+@media (max-width: 600px) {
+  #workContainer {
+    padding-bottom: 3rem;
+  }
 
-.projectBox {
-  opacity: 0;
-  transform: translateY(10rem);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+  #workContainerBox {
+    width: 100%;
+  }
 
-.projectBox.animate {
-  opacity: 1;
-  transform: translateY(0);
+  .projectBox {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .workImg {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    width: 100%;
+  }
+
+  .workImg img {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    aspect-ratio: 1;
+  }
+
+  .secondProjectBox {
+    flex-flow: column;
+  }
+
+  .projectContent {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    padding: 3rem 1.5rem;
+  }
+
+  #seeMoreBtn:hover a > svg {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-left: 0.4rem;
+  }
+
+  #seeMoreBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  #seeMoreBtn a > svg {
+    fill: #000000;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-left: 0.4rem;
+  }
 }

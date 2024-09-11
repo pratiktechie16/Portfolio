@@ -6,35 +6,65 @@ import Home from "./Component/Home";
 import Footer from "./Component/Footer";
 import Navbar from "./Component/Navbar";
 import HamburgerNav from "./Component/HamburgerNav";
-import Skills from "./Component/AboutComp/Skills";
-import Experience from "./Component/AboutComp/Experience";
-import Education from "./Component/AboutComp/Education";
-import { Routes, Route, Navigate } from "react-router-dom";
+import Skills from "./Component/Skills";
+import Experience from "./Component/Experience";
+import { useEffect } from "react";
+import Links from "./Component/Links";
 
 const App = () => {
+  useEffect(() => {
+    const projectBoxes = document.querySelectorAll(".animationBox");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    projectBoxes.forEach((box) => {
+      observer.observe(box);
+    });
+
+    return () => {
+      projectBoxes.forEach((box) => {
+        observer.unobserve(box);
+      });
+    };
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    return section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <Navbar />
-      <HamburgerNav />
-
-      <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-
-        <Route path="/home" element={<Home />} />
-
-        <Route path="/about" element={<About />}>
-          <Route path="/about" element={<Navigate to="/about/skills" />} />
-          <Route path="/about/skills" element={<Skills />} />
-          <Route path="/about/experience" element={<Experience />} />
-          <Route path="/about/education" element={<Education />} />
-        </Route>
-
-        <Route path="/contact" element={<Contact />} />
-
-        <Route path="/work" element={<Work />} />
-      </Routes>
-
+      <Navbar scrollToSection={scrollToSection} />
+      <HamburgerNav scrollToSection={scrollToSection} />
+      <Home />
+      <About />
+      <Skills />
+      <Experience />
+      {/* <Education /> */}
+      <Work />
+      <Links />
+      <Contact />
       <Footer />
+
+      <div className="downloadCV">
+        <a href="./PratikJadhavCV.pdf" download="Pratik_Jadhav_CV">
+          <i class="fa-solid fa-file fa-flip"></i>
+          <span className="onHoverText">Download CV</span>
+        </a>
+      </div>
     </>
   );
 };

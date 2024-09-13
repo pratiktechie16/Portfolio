@@ -91,4 +91,8 @@
   .webTitle h4 {
     font-size: 1.1rem;
   }
+
+  .showHamburgerBtn i {
+    font-size: 1.3rem;
+  }
 }

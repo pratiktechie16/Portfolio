@@ -7,7 +7,7 @@ import axios from "axios";
 const Contact = () => {
   const [popUp, setPopUp] = useState({
     display: "none",
-    text: "Successfully Submitted",
+    text: "Message delivered successfully.",
   });
 
   const [copiedText, setCopiedText] = useState({
@@ -66,15 +66,24 @@ const Contact = () => {
         );
 
         if (response.status === 200) {
-          setPopUp({ display: "flex", text: "Successfully Submitted" });
+          setPopUp({
+            display: "flex",
+            text: "Message delivered successfully.",
+          });
           resetForm();
         } else {
-          setPopUp({ display: "flex", text: "Submission Failed" });
+          setPopUp({
+            display: "flex",
+            text: "Submission failed. Please try again.",
+          });
         }
 
         setSubmitting(false);
       } catch (error) {
-        setPopUp({ display: "flex", text: "Submission Failed" });
+        setPopUp({
+          display: "flex",
+          text: "Submission failed. Please try again.",
+        });
         setSubmitting(true);
       }
     },
@@ -241,7 +250,7 @@ const Contact = () => {
                 disabled={formik.isSubmitting}
               >
                 <span>
-                  Send now
+                  {formik.isSubmitting ? "Sending" : "Send now"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ transform: "rotate(-90deg)" }}
@@ -262,9 +271,17 @@ const Contact = () => {
 
           {/* Add User Submit Successfully PopUp Section*/}
           <div id="popUp" style={{ display: popUp.display }}>
-            <h1>{popUp.text}</h1>
-            <button id="popUpBtn" onClick={onPopUp}>
-              OK
+            <h2>{popUp.text}</h2>
+            <button
+              id="submitBtn"
+              onClick={onPopUp}
+              style={{ marginTop: "2.12rem" }}
+            >
+              <span>
+                {popUp.text === "Message delivered successfully."
+                  ? "Okay"
+                  : "Go back"}
+              </span>
             </button>
           </div>
         </aside>

@@ -48,6 +48,13 @@
     0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03);
   padding: 1rem;
   border-radius: 0.5rem;
+  transition: all 0.4s;
+}
+
+.skillBox div:hover {
+  width: 100%;
+  height: 100%;
+  transform: scale(115%);
 }
 
 .skillBox p {

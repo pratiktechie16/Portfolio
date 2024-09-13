@@ -25,63 +25,63 @@ const Skills = () => {
         </div>
         <div id="skillContainerBox">
           <div className="skillBox animationBox">
-            <div>
+            <div className="animationBox">
               <img className="icons" src={javaScript} alt="" />
               <span className="onHoverText">Javascript</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={react} alt="" />
               <span className="onHoverText">React</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={redux} alt="" />
               <span className="onHoverText">Redux Toolkit</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={materialUi} alt="" />
               <span className="onHoverText">Material UI</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={figma} alt="" />
               <span className="onHoverText">Figma</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={css} alt="" />
               <span className="onHoverText">CSS3</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="oracle icons" src={Bootstrap} alt="" />
               <span className="onHoverText">Bootstrap</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={html} alt="" />
               <span className="onHoverText">HTML5</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={git} alt="" />
               <span className="onHoverText">Git</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="github icons" src={github} alt="" />
               <span className="onHoverText">GitHub</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={vscode} alt="" />
               <span className="onHoverText">VS Code</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={node} alt="" />
               <span className="onHoverText">Node</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={express} alt="" />
               <span className="onHoverText">Express</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="icons" src={mongodb} alt="" />
               <span className="onHoverText">MongoDB</span>
             </div>
-            <div>
+            <div className="animationBox">
               <img className="oracle icons" src={oracle} alt="" />
               <span className="onHoverText">Oracle</span>
             </div>

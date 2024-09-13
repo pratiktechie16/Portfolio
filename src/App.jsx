@@ -57,11 +57,21 @@ const App = () => {
       <Work />
       <Links />
       <Contact />
+
+      <div
+        className="backToTop animationBox"
+        onClick={() => scrollToSection("homeContainer")}
+      >
+        <div>
+          <i className="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+
       <Footer />
 
       <div className="downloadCV">
         <a href="./PratikJadhavCV.pdf" download="Pratik_Jadhav_CV">
-          <i class="fa-solid fa-file fa-flip"></i>
+          <i className="fa-solid fa-file fa-flip"></i>
           <span className="onHoverText">Download CV</span>
         </a>
       </div>

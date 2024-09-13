@@ -72,6 +72,34 @@ p {
   transform: translateY(0);
 }
 
+.backToTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.backToTop div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background-color: #111111;
+  border-radius: 2rem;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.backToTop i {
+  font-size: 1.1rem;
+  color: white;
+}
+
 /* Download CV */
 .downloadCV {
   display: flex;
@@ -93,6 +121,11 @@ p {
   height: 4rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+
+#downloadCV a:hover {
+  opacity: 1;
+  background-color: hsl(0deg 0% 91.37%);
 }
 
 .downloadCV a .onHoverText {
@@ -159,7 +192,6 @@ p {
   .downloadCV {
     display: flex;
     position: fixed;
-    bottom: 3rem;
     right: 1.2rem;
     height: fit-content;
     width: fit-content;

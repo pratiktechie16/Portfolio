@@ -163,6 +163,12 @@
   height: 2.5rem;
   padding: 0rem 1.25rem;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+#seeMoreBtn:hover {
+  opacity: 1;
+  background-color: hsl(0deg 0% 91.37%);
 }
 
 #seeMoreBtn:hover a > svg {

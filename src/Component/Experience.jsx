@@ -8,14 +8,13 @@ const Experience = () => {
         <div className="aboutHeadingDiv">
           <h1>Where i've worked</h1>
         </div>
-
-        <aside id="experienceContainerBox" className="animationBox">
+        <aside id="experienceContainerBox" className="animationBox experience2">
           <div className="experienceBox">
             {/* Headings */}
             <div className="experienceHeadingDiv">
               <div className="companyHeadingDiv">
                 <h2>Sibic Business Incubator</h2>
-                <h4>Sep 2022 - Present</h4>
+                <h4>Mar 2023 - Present</h4>
               </div>
               <h3 style={{ marginTop: "0.5rem" }}>React Developer</h3>
             </div>
@@ -45,6 +44,42 @@ const Experience = () => {
                 <span>AXIOS</span>
                 <span>Full Calender</span>
                 <span>Github</span>
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <aside id="experienceContainerBox" className="animationBox experience1">
+          <div className="experienceBox">
+            {/* Headings */}
+            <div className="experienceHeadingDiv">
+              <div className="companyHeadingDiv">
+                <h2>Sibic Business Incubator</h2>
+                <h4>Sep 2022 - Mar 2023</h4>
+              </div>
+              <h3 style={{ marginTop: "0.5rem" }}>
+                Front End Developer Intern
+              </h3>
+            </div>
+
+            {/* Role */}
+            <div className="experienceDescriptionDiv">
+              <p style={{ marginTop: "0rem" }}>
+                Gained hands-on experience in building web pages using HTML,
+                CSS, and JavaScript. Assisted the development team in creating
+                responsive designs for mobile and desktop. Collaborated with
+                senior developers to learn best practices in web development and
+                debugging. Worked on simple dynamic features like form
+                validation and updating web content. Developed skills in
+                troubleshooting browser compatibility issues and optimizing page
+                performance.
+              </p>
+              <p style={{ marginTop: "1.5rem" }}>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Javascript</span>
+                <span>Web Storage API</span>
+                <span>Fetch API</span>
               </p>
             </div>
           </div>

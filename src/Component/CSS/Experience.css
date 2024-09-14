@@ -10,19 +10,27 @@
   /* background: linear-gradient(90deg, #111111 68%, transparent 0%); */
 }
 
+.experience2 {
+  background: url("https://images.ctfassets.net/kftzwdyauwt9/4DU789tqdM4QZvMWBT45bk/263129242d17231f405e06e10e68db51/teams_engineering.jpg?w=640&q=90&fm=webp")
+    center center/cover;
+}
+
+.experience1 {
+  background: url("https://images.ctfassets.net/kftzwdyauwt9/6pKULniJbQfYSL7VhaJLQU/7b64a09a705faf3585cb82b2d2df26a3/teams_marketing.jpg?w=640&q=90&fm=webp")
+    center center/cover;
+}
+
 #experienceContainerBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: url("https://images.unsplash.com/photo-1671226366560-cc3c7ff768c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center center/cover;
   backdrop-filter: blur(24px);
   width: 68rem;
   border-radius: 0.5rem;
   height: fit-content;
   padding: 4rem 0rem;
-  margin-top: 3rem;
+  margin: 3rem 0rem;
 }
 
 .experienceBox {
@@ -39,7 +47,7 @@
   background: #111111;
   width: 85%;
   height: fit-content;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .experienceHeadingDiv {
@@ -65,14 +73,13 @@
   align-items: flex-start;
   width: 100%;
   height: fit-content;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
 }
 
 .experienceDescriptionDiv p {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   gap: 0.5rem;
 }
 

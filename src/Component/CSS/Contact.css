@@ -248,11 +248,20 @@
 /* Add User Submit Successfully PopUp Section*/
 #popUp {
   display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 35%;
+  width: 500px;
+  height: 250px;
+}
+
+.popUpBox {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid #111111;
-  /* background-color: #111111; */
   backdrop-filter: blur(50px);
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
@@ -261,10 +270,8 @@
     0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
     0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03);
   text-align: center;
-  position: fixed;
-  top: 35%;
-  width: 500px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   border-radius: 0.7rem;
 }
 
@@ -326,8 +333,12 @@
   }
 
   #popUp {
-    width: 340px;
+    width: 100%;
     height: 225px;
+  }
+
+  .popUpBox {
+    margin: 0rem 1.25rem;
   }
 
   #popUp > h2 {

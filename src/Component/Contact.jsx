@@ -271,18 +271,20 @@ const Contact = () => {
 
           {/* Add User Submit Successfully PopUp Section*/}
           <div id="popUp" style={{ display: popUp.display }}>
-            <h2>{popUp.text}</h2>
-            <button
-              id="submitBtn"
-              onClick={onPopUp}
-              style={{ marginTop: "2.12rem" }}
-            >
-              <span>
-                {popUp.text === "Message delivered successfully."
-                  ? "Okay"
-                  : "Go back"}
-              </span>
-            </button>
+            <div className="popUpBox">
+              <h2>{popUp.text}</h2>
+              <button
+                id="submitBtn"
+                onClick={onPopUp}
+                style={{ marginTop: "2.12rem" }}
+              >
+                <span>
+                  {popUp.text === "Message delivered successfully."
+                    ? "Okay"
+                    : "Go back"}
+                </span>
+              </button>
+            </div>
           </div>
         </aside>
       </section>

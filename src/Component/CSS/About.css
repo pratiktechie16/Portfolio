@@ -111,6 +111,7 @@
   }
 
   .aboutLeft img {
+    aspect-ratio: 1;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
   }
 

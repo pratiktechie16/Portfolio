@@ -6,13 +6,16 @@ const Links = () => {
     <>
       <section id="linksContainer">
         <div className="aboutHeadingDiv">
-          <h1>Where to find me</h1>
+          <h1 className="headingColor">Where to find me</h1>
         </div>
         <div id="linksContainerBox">
           {/* Linkedin */}
-          <div className="linksDiv animationBox">
+          <div className="linksDiv boxBgColor animationBox">
             <i className="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/pratikjdv16/">
+            <a
+              href="https://www.linkedin.com/in/pratikjdv16/"
+              className="headingColor"
+            >
               Connect on Linkedin{" "}
               <svg
                 width="0.625rem"
@@ -32,9 +35,9 @@ const Links = () => {
           </div>
 
           {/* Github */}
-          <div className="linksDiv animationBox">
+          <div className="linksDiv boxBgColor animationBox">
             <i className="fa-brands fa-github"></i>
-            <a href="https://www.instagram.com/__pratik16/">
+            <a href="https://github.com/Pratikjdv16" className="headingColor">
               Check repose on Github{" "}
               <svg
                 width="0.625rem"
@@ -54,9 +57,12 @@ const Links = () => {
           </div>
 
           {/* Instagram */}
-          <div className="linksDiv animationBox">
+          <div className="linksDiv boxBgColor animationBox">
             <i className="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/pratiktechie/">
+            <a
+              href="https://www.instagram.com/pratiktechie/"
+              className="headingColor"
+            >
               Follow on Instagram{" "}
               <svg
                 width="0.625rem"

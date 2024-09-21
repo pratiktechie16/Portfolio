@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"; // SF is rafce
 import "../Component/CSS/Home.css";
 
-const Home = () => {
+const Home = ({ mode }) => {
   const screenSize = window.innerWidth;
-  // console.log(screenSize);
+
   const texts =
     screenSize > 600
       ? [
@@ -42,17 +42,18 @@ const Home = () => {
           <div className="section">
             {screenSize > 600 ? (
               <>
-                <h1>Hello,</h1>
-                <h1 className="heading">I'm {typingEffect}</h1>
+                <h1 className="headingColor">Hello,</h1>
+                <h1 className="heading headingColor">I'm {typingEffect}</h1>
               </>
             ) : (
               <>
-                <h1>Hello,</h1>
-                <h1>I'm Pratik Jadhav</h1>
-                <h1 className="heading">{typingEffect}</h1>
+                <h1 className="headingColor">Hello,</h1>
+                <h1 className="headingColor">I'm Pratik Jadhav</h1>
+                <h1 className="heading headingColor">{typingEffect}</h1>
               </>
             )}
             <h4
+              className="headingColor"
               style={{
                 fontSize: "1.4174rem",
                 width: "50%",
@@ -66,10 +67,11 @@ const Home = () => {
 
             {/* See More Btn */}
             <div className="seeMoreBtnBox" style={{ marginTop: "2.12rem" }}>
-              <button id="seeMoreBtn">
+              <button id="seeMoreBtn" className="btnStyle">
                 <a
                   href="https://www.linkedin.com/in/pratikjdv16/"
                   target="blank"
+                  className="btnStyle"
                 >
                   Open to work{" "}
                   <svg

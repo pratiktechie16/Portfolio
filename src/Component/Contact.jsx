@@ -7,7 +7,7 @@ import axios from "axios";
 const Contact = () => {
   const [popUp, setPopUp] = useState({
     display: "none",
-    text: "Message delivered successfully.",
+    text: "Message delivered successfully",
   });
 
   const [copiedText, setCopiedText] = useState({
@@ -68,13 +68,13 @@ const Contact = () => {
         if (response.status === 200) {
           setPopUp({
             display: "flex",
-            text: "Message delivered successfully.",
+            text: "Message delivered successfully",
           });
           resetForm();
         } else {
           setPopUp({
             display: "flex",
-            text: "Submission failed. Please try again.",
+            text: "Submission failed, Please try again",
           });
         }
 
@@ -82,7 +82,7 @@ const Contact = () => {
       } catch (error) {
         setPopUp({
           display: "flex",
-          text: "Submission failed. Please try again.",
+          text: "Submission failed, Please try again",
         });
         setSubmitting(true);
       }
@@ -93,16 +93,17 @@ const Contact = () => {
     <>
       <section id="contactContainer">
         <div className="aboutHeadingDiv">
-          <h1>Get in touch now</h1>
+          <h1 className="headingColor">Get in touch now</h1>
         </div>
 
         <aside id="contactContainerBox">
           <div className="contactLeft">
             {/* Email Info */}
-            <div className="contactInfoDiv animationBox">
+            <div className="contactInfoDiv boxBgColor animationBox">
               <i class="fa-solid fa-envelope"></i>
               <span
                 id="email_address"
+                className="headingColor"
                 onClick={() => copyButton("email_address")}
               >
                 pratikdjadhav16@gmail.com{" "}
@@ -114,16 +115,17 @@ const Contact = () => {
                   }}
                 ></i>
                 {copiedText.emailCopied ? (
-                  <span className="copiedText">Copied</span>
+                  <span className="copiedText techStyle">Copied</span>
                 ) : null}
               </span>
             </div>
 
             {/* Phone Info */}
-            <div className="contactInfoDiv animationBox">
+            <div className="contactInfoDiv boxBgColor animationBox">
               <i class="fa-solid fa-phone"></i>
               <span
                 id="phone_number"
+                className="headingColor"
                 onClick={() => copyButton("phone_number")}
               >
                 +91 7620094762{" "}
@@ -131,23 +133,25 @@ const Contact = () => {
                   className="fa-regular fa-clone"
                   style={{
                     fontSize: "1rem",
-
                     marginLeft: "0.5rem",
                   }}
                 ></i>
                 {copiedText.phoneCopied ? (
-                  <span className="copiedText">Copied</span>
+                  <span className="copiedText techStyle">Copied</span>
                 ) : null}
               </span>
             </div>
 
             {/* Location Info */}
-            <div className="linksDiv animationBox">
+            <div className="linksDiv boxBgColor animationBox">
               <i
                 class="fa-solid fa-location-dot"
                 style={{ fontSize: "3rem" }}
               ></i>
-              <a href="https://maps.app.goo.gl/H1cPMMpzhcNtG6ye6">
+              <a
+                href="https://maps.app.goo.gl/H1cPMMpzhcNtG6ye6"
+                className="headingColor"
+              >
                 Currently in Pune, India
                 <svg
                   style={{ marginLeft: "0.4rem" }}
@@ -169,7 +173,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="contactRight animationBox">
+          <div className="contactRight boxBgColor animationBox">
             <div className="contactImg">
               <img
                 src="https://images.unsplash.com/photo-1558522195-e1201b090344?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -181,6 +185,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  className="inputBoxStyle"
                   name="name"
                   placeholder="Enter your name"
                   onChange={formik.handleChange}
@@ -203,6 +208,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  className="inputBoxStyle"
                   name="email"
                   placeholder="Enter your email"
                   onChange={formik.handleChange}
@@ -224,6 +230,7 @@ const Contact = () => {
               <div className="contactInfoInputDiv">
                 <textarea
                   id="massage"
+                  className="inputBoxStyle"
                   name="massage"
                   cols="30"
                   rows="7"
@@ -249,7 +256,7 @@ const Contact = () => {
                 type="submit"
                 disabled={formik.isSubmitting}
               >
-                <span>
+                <span className="btnStyle">
                   {formik.isSubmitting ? "Sending" : "Send now"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -271,15 +278,15 @@ const Contact = () => {
 
           {/* Add User Submit Successfully PopUp Section*/}
           <div id="popUp" style={{ display: popUp.display }}>
-            <div className="popUpBox">
-              <h2>{popUp.text}</h2>
+            <div className="popUpBox boxBgColor">
+              <h2 className="headingColor">{popUp.text}</h2>
               <button
                 id="submitBtn"
                 onClick={onPopUp}
                 style={{ marginTop: "2.12rem" }}
               >
-                <span>
-                  {popUp.text === "Message delivered successfully."
+                <span className="btnStyle">
+                  {popUp.text === "Message delivered successfully"
                     ? "Okay"
                     : "Go back"}
                 </span>

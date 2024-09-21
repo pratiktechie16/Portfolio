@@ -12,6 +12,7 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  transition: all 0.4s;
 }
 
 body::-webkit-scrollbar {
@@ -21,7 +22,6 @@ body::-webkit-scrollbar {
 
 h1 {
   text-align: center;
-  color: white;
   font-size: 4rem;
   line-height: 110%;
   letter-spacing: -0.02em;
@@ -29,7 +29,6 @@ h1 {
 }
 
 h2 {
-  color: white;
   font-size: 1.8rem;
   line-height: 110%;
   letter-spacing: -0.02em;
@@ -37,27 +36,60 @@ h2 {
 }
 
 h3 {
-  color: white;
   font-size: 1.4rem;
   line-height: 110%;
   letter-spacing: -0.02em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 1rem;
-  color: white;
   line-height: 110%;
   letter-spacing: -0.02em;
   font-weight: 400;
 }
 
 p {
-  color: #b4b4b4;
   line-height: 160%;
   letter-spacing: 0.016rem;
   font-size: 0.95426rem;
   font-weight: 400;
+}
+
+.headingColor {
+  color: white;
+}
+
+.boxBgColor {
+  background-color: #111111;
+}
+
+.navBgColor {
+ 
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btnStyle {
+  color: black;
+  background-color: white;
+}
+
+.techStyle {
+  color: white;
+  background-color: black;
+}
+
+.paraColor {
+  color: #b4b4b4;
+}
+
+.inputBoxStyle {
+  color: white;
+  background-color: black;
+}
+
+i {
+  color: white;
 }
 
 /* Animation work */
@@ -86,11 +118,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  background-color: #111111;
   border-radius: 2rem;
-  width: 3rem;
-  height: 3rem;
+  /* box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
+    0px 0px 1.8px rgba(0, 0, 0, 0.01), 0px 0px 3px rgba(0, 0, 0, 0.012),
+    0px 0px 4.6px rgba(0, 0, 0, 0.014), 0px 0px 6.8px rgba(0, 0, 0, 0.016),
+    0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
+    0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03); */
+  width: 3.5rem;
+  height: 3.5rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -115,7 +150,6 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: white;
   border-radius: 2rem;
   width: 3.5rem;
   height: 3.5rem;
@@ -133,13 +167,16 @@ p {
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
-  color: white;
-  background-color: black;
   font-size: 0.8rem;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.7px;
   position: absolute;
   bottom: 50%;
+  /* box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.007),
+    0px 0px 1.8px rgba(0, 0, 0, 0.01), 0px 0px 3px rgba(0, 0, 0, 0.012),
+    0px 0px 4.6px rgba(0, 0, 0, 0.014), 0px 0px 6.8px rgba(0, 0, 0, 0.016),
+    0px 0px 10.1px rgba(0, 0, 0, 0.018), 0px 0px 15.1px rgba(0, 0, 0, 0.02),
+    0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03); */
   width: fit-content;
   height: 0rem;
   padding: 0rem;
@@ -156,7 +193,7 @@ p {
 
 .downloadCV a > i {
   font-size: 1.5rem;
-  color: rgb(0, 0, 0);
+  background-color: transparent !important;
 }
 
 @media (max-width: 600px) {

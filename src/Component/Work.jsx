@@ -6,14 +6,14 @@ const Work = () => {
     <>
       <section id="workContainer">
         <div className="aboutHeadingDiv">
-          <h1>Things i've created</h1>
+          <h1 className="headingColor">Things i've created</h1>
         </div>
 
         {/* All Projects */}
         <section id="workContainerBox">
           <aside className="allProjectBox">
             {/* First Project */}
-            <div className="projectBox animationBox">
+            <div className="projectBox boxBgColor animationBox">
               <div className="workImg">
                 <img
                   src="https://images.unsplash.com/photo-1654573817889-296cad084c97?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -21,9 +21,9 @@ const Work = () => {
                 />
               </div>
               <div className="projectContent">
-                <h2>Flipkart Clone</h2>
+                <h2 className="headingColor">Flipkart Clone</h2>
                 <div className="projectPara">
-                  <p>
+                  <p className="paraColor">
                     Designed and developed a fully functional e-commerce
                     platform inspired by Flipkart. Created shopping cart
                     functionalities to improve user experience and retention.
@@ -34,18 +34,23 @@ const Work = () => {
                     design principles.
                   </p>
                   <p>
-                    <span>Javascript</span>
-                    <span>React</span>
-                    <span>React Router</span>
-                    <span>CSS</span>
-                    <span>Redux Toolkit</span>
-                    <span>Web Storage API</span>
-                    <span>GitHub</span>
+                    <span className="techStyle">Javascript</span>
+                    <span className="techStyle">React</span>
+                    <span className="techStyle">React Router</span>
+                    <span className="techStyle">CSS</span>
+                    <span className="techStyle">Redux Toolkit</span>
+                    <span className="techStyle">Web Storage API</span>
+                    <span className="techStyle">Git</span>
+                    <span className="techStyle">GitHub</span>
                   </p>
                 </div>
 
                 <div className="viewBtnBox">
-                  <a href="https://flipkart16.vercel.app/" target="blank">
+                  <a
+                    href="https://flipkart16.vercel.app/"
+                    target="blank"
+                    className="headingColor"
+                  >
                     Check it out{" "}
                     <svg
                       width="0.625rem"
@@ -67,11 +72,11 @@ const Work = () => {
             </div>
 
             {/* Second Project */}
-            <div className="projectBox secondProjectBox animationBox">
+            <div className="projectBox boxBgColor secondProjectBox animationBox">
               <div className="projectContent">
-                <h2>Clear Sky</h2>
+                <h2 className="headingColor">Clear Sky</h2>
                 <div className="projectPara">
-                  <p>
+                  <p className="paraColor">
                     Designed and developed weather application to provide
                     real-time weather information. Creating essential features
                     and functionalities to provide users. Integrated
@@ -83,17 +88,22 @@ const Work = () => {
                     temperature and wind speed.
                   </p>
                   <p>
-                    <span>Javascript</span>
-                    <span>React</span>
-                    <span>Fetch API</span>
-                    <span>CSS</span>
-                    <span>GitHub</span>
+                    <span className="techStyle">Javascript</span>
+                    <span className="techStyle">React</span>
+                    <span className="techStyle">Axios</span>
+                    <span className="techStyle">CSS</span>
+                    <span className="techStyle">Git</span>
+                    <span className="techStyle">GitHub</span>
                   </p>
                 </div>
 
                 {/* View Btn */}
                 <div className="viewBtnBox">
-                  <a href="https://clearsky-seven.vercel.app/" target="blank">
+                  <a
+                    href="https://clearsky-seven.vercel.app/"
+                    target="blank"
+                    className="headingColor"
+                  >
                     Check it out{" "}
                     <svg
                       width="0.625rem"
@@ -121,7 +131,7 @@ const Work = () => {
             </div>
 
             {/* Third Project */}
-            <div className="projectBox animationBox">
+            <div className="projectBox boxBgColor animationBox">
               <div className="workImg">
                 <img
                   src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -129,9 +139,9 @@ const Work = () => {
                 />
               </div>
               <div className="projectContent">
-                <h2>Facebook Login</h2>
+                <h2 className="headingColor">Facebook Login</h2>
                 <div className="projectPara">
-                  <p>
+                  <p className="paraColor">
                     Created a visually accurate and user-friendly interface,
                     closely resembling the Facebook login and signup pages.
                     Implemented responsive design principles for a consistent
@@ -141,18 +151,23 @@ const Work = () => {
                     an intuitive and engaging user experience.
                   </p>
                   <p>
-                    <span>Javascript</span>
-                    <span>React</span>
-                    <span>React Router</span>
-                    <span>CSS</span>
-                    <span>Web Storage API</span>
-                    <span>GitHub</span>
+                    <span className="techStyle">Javascript</span>
+                    <span className="techStyle">React</span>
+                    <span className="techStyle">React Router</span>
+                    <span className="techStyle">CSS</span>
+                    <span className="techStyle">Web Storage API</span>
+                    <span className="techStyle">Git</span>
+                    <span className="techStyle">GitHub</span>
                   </p>
                 </div>
 
                 {/* View Btn */}
                 <div className="viewBtnBox">
-                  <a href="https://facebook16.vercel.app/" target="blank">
+                  <a
+                    href="https://facebook16.vercel.app/"
+                    target="blank"
+                    className="headingColor"
+                  >
                     Check it out{" "}
                     <svg
                       width="0.625rem"
@@ -175,8 +190,12 @@ const Work = () => {
 
             {/* See More Btn */}
             <div className="seeMoreBtnBox">
-              <button id="seeMoreBtn">
-                <a href="https://github.com/Pratikjdv16/" target="blank">
+              <button id="seeMoreBtn" className="btnStyle">
+                <a
+                  href="https://github.com/Pratikjdv16/"
+                  target="blank"
+                  className="btnStyle"
+                >
                   See more{" "}
                   <svg
                     width="0.625rem"

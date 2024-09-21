@@ -2,23 +2,25 @@ import React from "react";
 import "../Component/CSS/About.css";
 import myPic from "./Icons/enhanced-image (1).png";
 
-const About = ({ ref }) => {
+const About = () => {
   return (
     <>
       <section id="aboutContainer">
         <div className="aboutHeadingDiv">
-          <h1>A glimpse of me</h1>
+          <h1 className="headingColor">A glimpse of me</h1>
         </div>
 
         <aside id="aboutContainerBox" className="animationBox">
-          <div className="aboutBox">
+          <div className="aboutBox boxBgColor">
             <div className="aboutLeft">
               <img src={myPic} alt="" />
             </div>
             <div className="aboutRight">
-              <h2 style={{ marginBottom: "0.5rem" }}>Building with passion</h2>
+              <h2 className="headingColor" style={{ marginBottom: "0.5rem" }}>
+                Building with passion
+              </h2>
               <div className="aboutRightTop">
-                <p className="aboutPara">
+                <p className="aboutPara paraColor">
                   I am driven by a deep passion for front-end development,
                   continuously exploring new ways to create engaging and
                   intuitive user experiences. With a solid foundation in
@@ -28,7 +30,7 @@ const About = ({ ref }) => {
                   ensuring high-quality, efficient code that solves complex
                   challenges.
                 </p>
-                <p className="aboutPara">
+                <p className="aboutPara paraColor">
                   I am committed to staying up-to-date with the latest
                   technologies and best practices, always looking for
                   opportunities to learn and grow. Whether it's enhancing user

@@ -43,7 +43,16 @@ const Navbar = ({ scrollToSection, switchMode, mode }) => {
             ) : (
               <img src={LightLogo} alt="" />
             )}
-            <h4 className="headingColor">pratiktechie</h4>
+            <h4
+              className="headingColor"
+              style={
+                mode === "darkMode"
+                  ? { fontWeight: "400" }
+                  : { fontWeight: "500" }
+              }
+            >
+              pratiktechie
+            </h4>
           </div>
           <div className="navbar-content">
             <div>

@@ -7,7 +7,7 @@ import Footer from "./Component/Footer";
 import Navbar from "./Component/Navbar";
 import HamburgerNav from "./Component/HamburgerNav";
 import Skills from "./Component/Skills";
-import Experience from "./Component/Experience";
+import Experience from "./Component/Experience/Experience";
 import { useEffect, useState } from "react";
 import Links from "./Component/Links";
 

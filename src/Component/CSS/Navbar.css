@@ -11,7 +11,8 @@
 }
 
 .navbarContainer.blur {
-  backdrop-filter: blur(24px);
+  /* backdrop-filter: blur(24px); */
+  backdrop-filter: blur(4px);
 }
 
 .navbarContainerBox {

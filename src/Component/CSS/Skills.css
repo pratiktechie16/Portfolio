@@ -70,11 +70,11 @@
     0px 0px 24px rgba(0, 0, 0, 0.023), 0px 0px 45px rgba(0, 0, 0, 0.03); */
   letter-spacing: 0.7px;
   position: absolute;
-  bottom: 50%;
+  bottom: -35px;
   width: fit-content;
-  height: 0rem;
-  padding: 0rem;
-  opacity: 0;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  opacity: 1;
   transition: all 0.4s ease-in-out;
 }
 
@@ -84,12 +84,12 @@
   border-radius: 0.2rem;
 }
 
-.skillBox div:hover .onHoverText {
+/* .skillBox div:hover .onHoverText {
   bottom: -35px;
   height: fit-content;
   padding: 0.5rem 1rem;
   opacity: 1;
-}
+} */
 
 @media (max-width: 600px) {
   #skillContainer {

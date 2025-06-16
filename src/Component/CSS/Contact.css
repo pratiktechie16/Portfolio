@@ -165,7 +165,7 @@
 }
 
 .error {
-  color: #b4b4b4;
+  color: #cd4b4b;
   width: 100%;
   font-size: 0.8rem;
   height: fit-content;
@@ -188,6 +188,7 @@
 #massage {
   width: 100%;
   padding: 0.62rem;
+  resize: none;
 }
 
 #submitBtn {

@@ -1,5 +1,6 @@
 import React from "react";
 import "../Component/CSS/Work.css";
+import { PROJECT_CONSTANT } from "./Constants/ProjectConstant";
 
 const Work = () => {
   return (
@@ -12,187 +13,63 @@ const Work = () => {
         {/* All Projects */}
         <section id="workContainerBox">
           <aside className="allProjectBox">
-            {/* First Project */}
-            <div className="projectBox boxBgColor animationBox">
-              <div className="workImg">
-                <img
-                  src="https://images.unsplash.com/photo-1654573817889-296cad084c97?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
-              <div className="projectContent">
-                <h2 className="headingColor">Flipkart Clone</h2>
-                <div className="projectPara">
-                  <p className="paraColor">
-                    Designed and developed a fully functional e-commerce
-                    platform inspired by Flipkart. Created shopping cart
-                    functionalities to improve user experience and retention.
-                    Creating essential features and functionalities to provide
-                    users. Implemented search and filter functionality to easily
-                    find exactly products. Ensured the platform is accessible
-                    and usable across various devices by implementing responsive
-                    design principles.
-                  </p>
-                  <p>
-                    <span className="techStyle">Javascript</span>
-                    <span className="techStyle">React</span>
-                    <span className="techStyle">React Router</span>
-                    <span className="techStyle">CSS</span>
-                    <span className="techStyle">Redux Toolkit</span>
-                    <span className="techStyle">Web Storage API</span>
-                    <span className="techStyle">Git</span>
-                    <span className="techStyle">GitHub</span>
-                  </p>
-                </div>
+            {PROJECT_CONSTANT?.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`projectBox boxBgColor ${
+                    item.IMAGE_SIDE === "right" ? "secondProjectBox" : ""
+                  } animationBox`}
+                >
+                  <div className="workImg">
+                    <img src={item.URL} alt={item.PROJECT_NAME} />
+                  </div>
+                  <div className="projectContent">
+                    <h2 className="headingColor">{item.PROJECT_NAME}</h2>
+                    <div className="projectPara">
+                      <p className="paraColor">{item.DESCRIPTION}</p>
+                      <p>
+                        {item.SKILLS.map((item, index) => (
+                          <span key={index} className="techStyle">
+                            {item}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
 
-                <div className="viewBtnBox">
-                  <a
-                    href="https://flipkart16.vercel.app/"
-                    target="blank"
-                    className="headingColor"
-                  >
-                    Check it out{" "}
-                    <svg
-                      width="0.625rem"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 9L9 1M9 1H2.5M9 1V7.22222"
-                        stroke="currentColor"
-                        strokeWidth="1.25"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
+                    <div className="viewBtnBox">
+                      <a
+                        href={item.LINK}
+                        target="blank"
+                        className="headingColor"
+                      >
+                        Check it out{" "}
+                        <svg
+                          width="0.625rem"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 9L9 1M9 1H2.5M9 1V7.22222"
+                            stroke="currentColor"
+                            strokeWidth="1.25"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Second Project */}
-            <div className="projectBox boxBgColor secondProjectBox animationBox">
-              <div className="projectContent">
-                <h2 className="headingColor">Clear Sky</h2>
-                <div className="projectPara">
-                  <p className="paraColor">
-                    Designed and developed weather application to provide
-                    real-time weather information. Creating essential features
-                    and functionalities to provide users. Integrated
-                    location-based services to automatically detect and display
-                    weather information for the user's current location.
-                    Integrated with a weather API to fetch current weather
-                    conditions and other relevant data. Developed interactive
-                    and informative weather visualizations, including
-                    temperature and wind speed.
-                  </p>
-                  <p>
-                    <span className="techStyle">Javascript</span>
-                    <span className="techStyle">React</span>
-                    <span className="techStyle">Axios</span>
-                    <span className="techStyle">CSS</span>
-                    <span className="techStyle">Git</span>
-                    <span className="techStyle">GitHub</span>
-                  </p>
-                </div>
-
-                {/* View Btn */}
-                <div className="viewBtnBox">
-                  <a
-                    href="https://clearsky-seven.vercel.app/"
-                    target="blank"
-                    className="headingColor"
-                  >
-                    Check it out{" "}
-                    <svg
-                      width="0.625rem"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 9L9 1M9 1H2.5M9 1V7.22222"
-                        stroke="currentColor"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="workImg">
-                <img
-                  src="https://images.unsplash.com/photo-1705090669849-883c9430d712?q=80&w=2009&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            {/* Third Project */}
-            <div className="projectBox boxBgColor animationBox">
-              <div className="workImg">
-                <img
-                  src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
-              <div className="projectContent">
-                <h2 className="headingColor">Facebook Login</h2>
-                <div className="projectPara">
-                  <p className="paraColor">
-                    Created a visually accurate and user-friendly interface,
-                    closely resembling the Facebook login and signup pages.
-                    Implemented responsive design principles for a consistent
-                    experience across various devices. Implemented comprehensive
-                    error handling to guide users through the login and signup
-                    process smoothly. Applied modern design principles to create
-                    an intuitive and engaging user experience.
-                  </p>
-                  <p>
-                    <span className="techStyle">Javascript</span>
-                    <span className="techStyle">React</span>
-                    <span className="techStyle">React Router</span>
-                    <span className="techStyle">CSS</span>
-                    <span className="techStyle">Web Storage API</span>
-                    <span className="techStyle">Git</span>
-                    <span className="techStyle">GitHub</span>
-                  </p>
-                </div>
-
-                {/* View Btn */}
-                <div className="viewBtnBox">
-                  <a
-                    href="https://facebook16.vercel.app/"
-                    target="blank"
-                    className="headingColor"
-                  >
-                    Check it out{" "}
-                    <svg
-                      width="0.625rem"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 9L9 1M9 1H2.5M9 1V7.22222"
-                        stroke="currentColor"
-                        strokeWidth="1.25"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+              );
+            })}
 
             {/* See More Btn */}
             <div className="seeMoreBtnBox">
               <button id="seeMoreBtn" className="btnStyle">
                 <a
-                  href="https://github.com/Pratikjdv16/"
+                  href="https://github.com/pratiktechie16/"
                   target="blank"
                   className="btnStyle"
                 >

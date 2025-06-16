@@ -65,6 +65,10 @@
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
+.secondProjectBox {
+  flex-flow: row-reverse;
+}
+
 .secondProjectBox .workImg > img {
   border-radius: 0rem 0.5rem 0.5rem 0rem;
 }

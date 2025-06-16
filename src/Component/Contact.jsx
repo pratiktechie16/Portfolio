@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import "../Component/CSS/Contact.css";
 import axios from "axios";
+import { CONTACT_CONSTANT } from "./Constants/ContactConstant";
 
 const Contact = () => {
   const [popUp, setPopUp] = useState({
@@ -98,49 +99,34 @@ const Contact = () => {
 
         <aside id="contactContainerBox">
           <div className="contactLeft">
-            {/* Email Info */}
-            <div className="contactInfoDiv boxBgColor animationBox">
-              <i class="fa-solid fa-envelope"></i>
-              <span
-                id="email_address"
-                className="headingColor"
-                onClick={() => copyButton("email_address")}
-              >
-                pratikdjadhav16@gmail.com{" "}
-                <i
-                  className="fa-regular fa-clone"
-                  style={{
-                    fontSize: "1rem",
-                    marginLeft: "0.5rem",
-                  }}
-                ></i>
-                {copiedText.emailCopied ? (
-                  <span className="copiedText techStyle">Copied</span>
-                ) : null}
-              </span>
-            </div>
-
-            {/* Phone Info */}
-            <div className="contactInfoDiv boxBgColor animationBox">
-              <i class="fa-solid fa-phone"></i>
-              <span
-                id="phone_number"
-                className="headingColor"
-                onClick={() => copyButton("phone_number")}
-              >
-                +91 7620094762{" "}
-                <i
-                  className="fa-regular fa-clone"
-                  style={{
-                    fontSize: "1rem",
-                    marginLeft: "0.5rem",
-                  }}
-                ></i>
-                {copiedText.phoneCopied ? (
-                  <span className="copiedText techStyle">Copied</span>
-                ) : null}
-              </span>
-            </div>
+            {CONTACT_CONSTANT?.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="contactInfoDiv boxBgColor animationBox"
+                >
+                  <i className={`fa-solid ${item.ICON}`}></i>
+                  <span
+                    id={item.ID}
+                    className="headingColor"
+                    onClick={() => copyButton(item.ID)}
+                  >
+                    {item.TEXT}
+                    <i
+                      className="fa-regular fa-clone"
+                      style={{
+                        fontSize: "1rem",
+                        marginLeft: "0.5rem",
+                      }}
+                    ></i>
+                    {(item.ID === "email_address" && copiedText.emailCopied) ||
+                    (item.ID === "phone_number" && copiedText.phoneCopied) ? (
+                      <span className="copiedText techStyle">Copied</span>
+                    ) : null}
+                  </span>
+                </div>
+              );
+            })}
 
             {/* Location Info */}
             <div className="linksDiv boxBgColor animationBox">

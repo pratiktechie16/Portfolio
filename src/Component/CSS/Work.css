@@ -223,7 +223,7 @@
   }
 
   .secondProjectBox {
-    flex-flow: column;
+    /* flex-flow: column; */
   }
 
   .projectContent {

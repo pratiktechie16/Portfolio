@@ -69,7 +69,7 @@ const Home = ({ mode }) => {
             <div className="seeMoreBtnBox" style={{ marginTop: "2.12rem" }}>
               <button id="seeMoreBtn" className="btnStyle">
                 <a
-                  href="https://www.linkedin.com/in/pratikjdv16/"
+                  href="https://www.linkedin.com/in/pratiktechie/"
                   target="blank"
                   className="btnStyle"
                 >

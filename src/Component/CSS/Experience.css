@@ -124,5 +124,6 @@
   .experienceDescriptionDiv p > span {
     flex: 1 1;
     text-wrap-mode: nowrap;
+    text-wrap: nowrap;
   }
 }
